@@ -1,6 +1,6 @@
 from load_csv import load
 
-print("TEST 01 | Valid Path",load("data/life_expectancy_years.csv"), sep='\n')
+print("TEST 01 | Valid Path", load("data/life_expectancy_years.csv"), sep='\n')
 
 print("TEST 02 | Empty string", load(""), sep='\n')
 
