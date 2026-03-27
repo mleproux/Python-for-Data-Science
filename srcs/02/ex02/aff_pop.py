@@ -67,9 +67,8 @@ def main():
         ax.locator_params(axis='y', nbins=4)
         ax.yaxis.set_major_formatter(
             ticker.FuncFormatter(lambda x, pos: f'{x/1_000_000:.0f}M'))
-        ax.xaxis.set_major_locator(ticker.MultipleLocator(40))
-        years_tick = years_data[:40]
-        plt.xticks = years_tick
+        years_tick = years_data[::40]
+        plt.xticks(years_tick)
         plt.show()
     except KeyboardInterrupt:
         print("\nProgram terminated by user.")

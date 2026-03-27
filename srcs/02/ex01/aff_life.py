@@ -14,8 +14,8 @@ def main():
         france_data = db[db['country'] == "France"].iloc[:, 1:]
         years_data = france_data.columns.astype(int)
         plt.plot(years_data, france_data.values.flatten(), label="France")
-        years_tick = years_data[:40]
-        plt.xticks = years_tick
+        years_tick = years_data[::40]
+        plt.xticks(years_tick)
         plt.title("France Life expectancy Projections")
         plt.xlabel("Year")
         plt.ylabel("Life Expectancy")
