@@ -41,18 +41,22 @@ def main():
         years_data = main_data.columns.astype(int)
         main_data = main_data.map(convert_value)
         other_data = other_data.map(convert_value)
+        valid_years = years_data <= 2050
+        years_data = years_data[valid_years]
+        main_values = main_data.values.flatten()[valid_years]
+        other_values = other_data.values.flatten()[valid_years]
         # Plotting
         plt.plot(
                 years_data,
-                other_data.values.flatten(),
+                other_values,
                 label=other_country,
                 color='b',
             )
         plt.plot(
                 years_data,
-                main_data.values.flatten(),
+                main_values,
                 label=main_country,
-                color='b',
+                color='g',
             )
         plt.legend(loc='lower right')
         plt.title("Population Projections")
@@ -60,14 +64,12 @@ def main():
         plt.ylabel("Population")
         # Adjusting tick locator
         ax = plt.gca()
-        # ax.yaxis.set_major_locator(ticker.MultipleLocator(20_000_000))
         ax.locator_params(axis='y', nbins=4)
         ax.yaxis.set_major_formatter(
             ticker.FuncFormatter(lambda x, pos: f'{x/1_000_000:.0f}M'))
         ax.xaxis.set_major_locator(ticker.MultipleLocator(40))
         years_tick = years_data[:40]
         plt.xticks = years_tick
-        # ax.set_xlim(1800, 2050)
         plt.show()
     except KeyboardInterrupt:
         print("\nProgram terminated by user.")
