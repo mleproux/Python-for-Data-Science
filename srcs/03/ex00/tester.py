@@ -10,7 +10,7 @@ print(Ned.die.__doc__)
 print("---")
 Lyanna = Stark("Lyanna", False)
 print(Lyanna.__dict__)
-print("---")
+print("--- MORE TESTS ---")
 try:
     hodor = Character("hodor")
 except TypeError as error:
