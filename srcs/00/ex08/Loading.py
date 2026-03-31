@@ -3,7 +3,7 @@ def ft_tqdm(lst: range) -> None:
     n = 0
     for i in lst:
         n += 1
-        percent = int((i + 1) / len(lst) * 100)
+        percent = int(n / len(lst) * 100)
         limit = int(percent / 100 * max_characters)
         progress = "█" * limit + " " * (max_characters - limit)
         per_str = f"{' '* (3 - len(str(percent)))}{percent}%"
