@@ -29,23 +29,23 @@ def main():
     print("\t------\t\t|\t---------")
     # test 1
     result1 = list(filter(is_multiple_10, objects[2]))
-    result2 = list(ft_filter(is_multiple_10, objects[2]))
+    result2 = ft_filter(is_multiple_10, objects[2])
     print(result1, "\t\t|", result2)
     # test 2
     result1 = list(filter(is_char_lower, objects[0]))
-    result2 = list(ft_filter(is_char_lower, objects[0]))
+    result2 = ft_filter(is_char_lower, objects[0])
     print(result1, "\t\t|", result2)
     # test 3
     result1 = list(filter(is_false, objects[1]))
-    result2 = list(ft_filter(is_false, objects[1]))
+    result2 = ft_filter(is_false, objects[1])
     print(result1, "\t\t|", result2)
     # test 4
     result1 = list(filter(is_false, objects[3]))
-    result2 = list(ft_filter(is_false, objects[3]))
+    result2 = ft_filter(is_false, objects[3])
     print(result1, "\t\t|", result2)
     # test 5
     result1 = list(filter(None, objects[1]))
-    result2 = list(ft_filter(None, objects[1]))
+    result2 = ft_filter(None, objects[1])
     print(result1, "\t\t|", result2)
 
 

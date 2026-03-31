@@ -4,5 +4,5 @@ def ft_filter(function: any, iterable: any) -> any:
     for which function(item) is true. \n
     If function is None, return the items that are true."""
     if function is None:
-        return (i for i in iterable if i)
-    return (i for i in iterable if function(i))
+        return [i for i in iterable if i]
+    return [i for i in iterable if function(i)]
