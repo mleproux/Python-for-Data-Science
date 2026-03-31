@@ -23,8 +23,9 @@ def get_text() -> str:
     """Prompt the user to input a string"""
     text = None
     while text is None or len(text) == 0:
-        text = input("What is the text to count?\n")
-    return  text
+        text = input("Please, provide a string: ")
+    return text
+
 
 def main():
     """Print the characters informations inside text argument \n

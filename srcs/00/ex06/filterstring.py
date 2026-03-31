@@ -26,7 +26,7 @@ def main():
     """
     number = parse_args()
     texts = sys.argv[1].split()
-    result = list(ft_filter(lambda text: len(text) > number, texts))
+    result = ft_filter(lambda text: len(text) > number, texts)
     print(result)
 
 

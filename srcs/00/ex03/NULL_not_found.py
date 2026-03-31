@@ -1,8 +1,8 @@
 import math
 
+
 def NULL_not_found(object: any) -> int:
     object_type = type(object)
-    
     if object is None:
         print(f"Nothing: {object} {object_type}")
     elif isinstance(object, float) and math.isnan(object):
@@ -17,4 +17,3 @@ def NULL_not_found(object: any) -> int:
         print("Type not Found")
         return 1
     return 0
-  
